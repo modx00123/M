@@ -15,8 +15,8 @@
     html, body {
       height: 100%;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #1a1a1a;
       color: white;
+      background: #000; /* fallback bg */
       overflow-y: auto;
     }
 
@@ -28,7 +28,7 @@
       height: 100%;
       object-fit: cover;
       z-index: -1;
-      opacity: 0.15;
+      opacity: 1;
     }
 
     .title {
@@ -60,15 +60,16 @@
       max-width: 400px;
       margin: 0 auto;
       padding: 25px 20px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
     }
 
     .anime-img {
       width: 220px;
-      height: auto;
       border-radius: 15px;
       margin: 0 auto 20px auto;
       display: block;
-      box-shadow: 0 0 20px #00ffff22;
+      box-shadow: 0 0 20px #00ffff33;
     }
 
     .description {
@@ -91,6 +92,7 @@
       flex-direction: column;
       align-items: center;
       background: rgba(255,255,255,0.05);
+      border: 2px solid white;
     }
 
     .cta-button {
@@ -155,7 +157,7 @@
 <body>
 
   <!-- Background Video -->
-  <video autoplay muted loop class="video-bg">
+  <video autoplay muted loop playsinline class="video-bg">
     <source src="modx.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
